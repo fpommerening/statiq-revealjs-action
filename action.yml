@@ -16,6 +16,6 @@ runs:
   using: 'docker'
   image: 'docker://ghcr.io/fpommerening/statiq.revealjs:v1.0.0'
   args:
-    - {{ inputs.input-path }}
-    - {{ inputs.slides-path }}
-    - {{ inputs.output-path }}
+    - ${{ inputs.input-path }}
+    - ${{ inputs.slides-path }}
+    - ${{ inputs.output-path }}

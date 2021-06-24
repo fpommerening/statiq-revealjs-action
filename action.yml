@@ -16,4 +16,5 @@ runs:
   using: 'docker'
   image: 'docker://ghcr.io/fpommerening/statiq.revealjs:v1.0.0'
   args:
-    ${{format('{{--input {0} --setting baseurl={1} --output {2}}}', inputs.input-path, inputs.slides-path, inputs.output-path)}}
+    "--help"
+    

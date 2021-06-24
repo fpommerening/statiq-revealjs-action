@@ -15,4 +15,6 @@ inputs:
 runs:
   using: 'docker'
   image: 'docker://ghcr.io/fpommerening/statiq.revealjs:v1.0.0'
+  args:
+    "--help"
 

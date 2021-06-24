@@ -15,7 +15,10 @@ inputs:
 runs:
   using: 'docker'
   image: 'ghcr://fpommerening/statiq.revealjs:v1.0.0'
-  args: |
-    '--input '${{ inputs.input-path }}
-    '--setting baseurl='${{ inputs.slides-path }}
-    '--output '${{ inputs.output-path }}
+  args:
+    - '--input '
+    - ${{ inputs.input-path }}
+    - '--setting baseurl='
+    - ${{ inputs.slides-path }}
+    - '--output '
+    - ${{ inputs.output-path }}

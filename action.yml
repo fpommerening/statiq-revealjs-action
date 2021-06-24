@@ -1,0 +1,21 @@
+# action.yml
+name: 'Run Statiq.RevealJS'
+description: 'Create a reveal.js slidedesk using Statiq'
+inputs:
+  input-path: 
+    description: 'Path for the *.rsd files'
+    required: true
+  output-path: 
+    description: 'Path where the slidedesk created in'
+    required: true
+    default: 'out'
+  slides-path: 
+    description: 'Base-Path where the slides located'
+    required: true
+runs:
+  using: 'docker'
+  image: 'ghcr://fpommerening/statiq.revealjs:v1.0.0'
+  args: |
+    --input ${{ inputs.input-path }}
+    --setting baseurl= ${{ inputs.slides-path }}
+    --output ${{ inputs.output-path }}

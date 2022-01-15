@@ -14,7 +14,7 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'ghcr://fpommerening/statiq.revealjs:v1.0.0'
+  image: 'ghcr://fpommerening/statiq.revealjs:v1.1.0'
   args: |
     --input ${{ inputs.input-path }}
     --setting baseurl= ${{ inputs.slides-path }}
